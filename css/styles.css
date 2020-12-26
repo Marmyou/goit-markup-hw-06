@@ -22,6 +22,7 @@
   --logo-color: #afb1b8;
   --semitransparante-bg-color: rgba(47, 48, 58, 0.8);
   --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --form-border-color: rgba(33, 33, 33, 0.2);
 }
 
 body {
@@ -240,12 +241,15 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
 
   min-width: 528px;
-  min-height: 581px;
+  padding: 40px;
   background-color: var(--primary-background-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--animation-timing);
 }
 
@@ -275,6 +279,97 @@ p {
 
 .modal-close-btn:hover .icon-cross {
   fill: var(--accent-color);
+}
+
+/* Форма заявки */
+
+.form-structure {
+  width: 100%;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-bottom: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+
+  color: var(--tertiary-text-color);
+}
+
+.form-input {
+  height: 40px;
+  margin: 0;
+  padding: 11px 12px 11px 42px;
+
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms var(--animation-timing);
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+  transition: fill 250ms var(--animation-timing);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-textarea {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms var(--animation-timing);
+}
+
+.form-textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 /* Hero */
@@ -607,13 +702,17 @@ p {
   margin-right: 70px;
 }
 
-.join-title {
+.footer-title {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 
   color: var(--secondary-text-color);
+}
+
+.social-footer-list {
+  margin-right: 93px;
 }
 
 .studio-social-link {
@@ -644,6 +743,15 @@ p {
   height: 20px;
 
   fill: currentColor;
+}
+
+.sign-form-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.sign-wrapper {
+  display: block;
 }
 
 /* Portfolio Hero (начало блоков страницы Портфолио) */

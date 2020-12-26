@@ -64,6 +64,43 @@
               <use href="./images/sprite.svg#icon-form-cross"></use>
             </svg>
           </button>
+          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <form class="form-structure js-speaker-form" autocomplete="off">
+            <div class="form-field">
+              <label class="form-label" for="name">Имя</label>
+              <div class="input-icon">
+                <input class="form-input" type="text" name="name" id="name">
+                <svg class="form-icon icon-name">
+                  <use href=./images/sprite.svg#icon-form-name></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="tel">Телефон</label>
+              <div class="input-icon">
+                <input class="form-input" type="tel" name="tel" id="tel">
+                <svg class="form-icon icon-tel">
+                  <use href=./images/sprite.svg#icon-form-tel></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="email">Почта</label>
+              <div class="input-icon">
+                <input class="form-input" type="email" name="email" id="email">
+                <svg class="form-icon icon-email">
+                  <use href="./images/sprite.svg#icon-form-email"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="comment">Комментарий</label>
+              <textarea class="form-textarea name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+            </div>
+            <input type="checkbox" name="policy" id="policy">
+            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href=""><span class="accent">Условия договора</span></a></label>
+            <button type="submit">Отправить</button>
+          </form>
         </div>
       </div>
       <!-- Секция героя -->
@@ -402,7 +439,7 @@
             </address>
           </li>
           <li>
-            <p class="join-title">присоединяйтесь</p>
+            <p class="footer-title">присоединяйтесь</p>
             <ul class="social-footer-list list flex">
               <li class="studio-social">
                 <a class="studio-social-link link" href="">
@@ -433,6 +470,15 @@
                 </a>
               </li>
             </ul>
+            <li>
+                <form class="sign-form-footer">
+                  <label class="footer-title" for="email">подпишитесь на рассылку</label>
+                  <div class="sign-wrapper">
+                    <input type="email" id="email" name="email" placeholder="E-mail"/>
+                <button type="submit" class="sign-button">подписаться</button>
+                </div>
+                </form>
+            </li>
           </li>
         </ul>
       </div>
