@@ -319,7 +319,7 @@ p {
   border-radius: 4px;
   outline: none;
 
-  transition: border-color 250ms var(--animation-timing);
+  transition: border 250ms var(--animation-timing);
 }
 
 .form-input:focus {
@@ -370,6 +370,80 @@ p {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.policy-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.label-policy {
+  display: flex;
+  align-items: center;
+  line-height: 1.71;
+}
+
+.agreement-link {
+  margin-left: 5px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.agreement-link:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.input-policy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-checkbox {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.input-policy:checked + .icon-checkbox {
+  border: 2px solid var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-origin: border-box;
+}
+
+.button-submit {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  transition: background-color 250ms var(--timing-func);
+}
+
+.button-submit:hover {
+  background-color: #188ce8;
 }
 
 /* Hero */

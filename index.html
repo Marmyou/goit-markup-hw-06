@@ -70,7 +70,7 @@
               <label class="form-label" for="name">Имя</label>
               <div class="input-icon">
                 <input class="form-input" type="text" name="name" id="name">
-                <svg class="form-icon icon-name">
+                <svg class="form-icon">
                   <use href=./images/sprite.svg#icon-form-name></use>
                 </svg>
               </div>
@@ -79,7 +79,7 @@
               <label class="form-label" for="tel">Телефон</label>
               <div class="input-icon">
                 <input class="form-input" type="tel" name="tel" id="tel">
-                <svg class="form-icon icon-tel">
+                <svg class="form-icon">
                   <use href=./images/sprite.svg#icon-form-tel></use>
                 </svg>
               </div>
@@ -88,18 +88,23 @@
               <label class="form-label" for="email">Почта</label>
               <div class="input-icon">
                 <input class="form-input" type="email" name="email" id="email">
-                <svg class="form-icon icon-email">
+                <svg class="form-icon">
                   <use href="./images/sprite.svg#icon-form-email"></use>
                 </svg>
               </div>
             </div>
             <div class="form-field">
               <label class="form-label" for="comment">Комментарий</label>
-              <textarea class="form-textarea name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
+              <textarea class="form-textarea" name="comment" id="comment" rows="8" placeholder="Введите текст"></textarea>
             </div>
-            <input type="checkbox" name="policy" id="policy">
-            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href=""><span class="accent">Условия договора</span></a></label>
-            <button type="submit">Отправить</button>
+            <div class="form-field policy-field">
+              <label class="label-policy">
+                <input class="input-policy" type="checkbox" name="policy" id="policy">
+                <span class="icon-checkbox"></span>
+                Соглашаюсь с рассылкой и принимаю<a href="" class="agreement-link">Условия договора</a>
+              </label>
+            </div>
+            <button class="button-submit" type="submit">Отправить</button>
           </form>
         </div>
       </div>
